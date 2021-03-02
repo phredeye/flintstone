@@ -18,8 +18,10 @@ web/.htaccess
 .env.*
 !.env.example
 
-# Composer
+# Storage, Logs, Package Managers
 /vendor
+/storage
+!/storage/logs/.gitkeep
 
 # WP-CLI
 wp-cli.local.yml

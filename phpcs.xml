@@ -1,23 +1,33 @@
 <?xml version="1.0"?>
-<ruleset name="Roots">
-  <description>Roots Coding Standards</description>
+<ruleset name="WordPress Coding Standards">
 
-  <!-- Scan all files in directory -->
-  <file>.</file>
+	<rule ref="WordPress-Core">
+		<exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning" />
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+		<exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments" />
+		<exclude name="WordPress.WP.I18n.MissingTranslatorsComment" />
+		<exclude name="WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase" />
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="WordPress.WhiteSpace.PrecisionAlignment"/>
+	</rule>
 
-  <!-- Scan only PHP files -->
-  <arg name="extensions" value="php"/>
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax" />
 
-  <!-- Ignore WordPress and Composer dependencies -->
-  <exclude-pattern>web/wp</exclude-pattern>
-  <exclude-pattern>vendor/</exclude-pattern>
+	<exclude-pattern>backend/src/System/Container/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>scoper.inc.php</exclude-pattern>
 
-  <!-- Show colors in console -->
-  <arg value="-colors"/>
+	<file>./platform/</file>
+  <file>./web/app/themes/flintstone/</file>
 
+	<arg name="extensions" value="php"/>
+	<arg name="parallel" value="20"/>
   <!-- Show sniff codes in all reports -->
-  <arg value="ns"/>
-
-  <!-- Use PSR-2 as a base -->
-  <rule ref="PSR2"/>
+  <arg value="ns"/>   
+	<arg value="ps"/>
+	<arg name="colors" />
+	<arg value="sp" />
+	<ini name="memory_limit" value="512M" />
 </ruleset>
