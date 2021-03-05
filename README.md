@@ -1,8 +1,11 @@
-<img src="https://banners.beyondco.de/Flintstone.png?theme=light&packageManager=composer+require&packageName=phredeye%2Fflintstone&pattern=wallpaper&style=style_1&description=A+custom+boilerplate+for+WordPress+based+on+Bedrock&md=1&showWatermark=1&fontSize=100px&images=beaker"/>
-
----
-
 # Flintstone
+
+## Maturity
+
+This software is currently in it's zygote stage.  Don't use it prematurely.
+
+v0.0.0.1
+
 
 
 ## Overview
@@ -57,9 +60,10 @@ Bedrock documentation is available at [https://roots.io/docs/bedrock/master/inst
 <hr style="margin-bottom: 500px">
 
 <pre>
-&quot;Yes that *is* the name...
+&quot;Yes that <em>is</em> the name...
   I don't f*** know!
-  The other thing was called "Bedrock", man!?&quot;
+  	The other thing was called "Bedrock", man!?&quot;
 
-<small>-- A conversation that sort of *might* have happened.</small>
+	<small>-- A conversation that sort of *might* have happened.</small>
+
 </pre>
